@@ -5,7 +5,6 @@ Created on Mon Sep 16 17:55:31 2024
 
 @author: akhil.gupta
 """
-!pip insatll spacy
 import streamlit as st
 import pandas as pd
 import spacy
