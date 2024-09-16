@@ -8,6 +8,16 @@ Created on Mon Sep 16 17:55:31 2024
 import streamlit as st
 import pandas as pd
 import spacy
+from spacy.cli import download
+
+# Function to ensure the model is installed
+def ensure_model():
+    try:
+        spacy.load('en_core_web_md')
+    except OSError:
+        download('en_core_web_md')
+
+ensure_model()
 
 # Load spaCy's pre-trained model
 nlp = spacy.load('en_core_web_md')
